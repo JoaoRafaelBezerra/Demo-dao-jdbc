@@ -32,8 +32,11 @@ public class Program {
 		}*/
 		
 		Seller seller2 = new Seller(null,"GREG","GREG@GMAIL.COM",new Date(),400.0,department);
-		sellerDao.insert(seller2);
-		System.out.println("Inserted" + seller2.getId());
+		//sellerDao.insert(seller2);
+		//System.out.println("Inserted" + seller2.getId());
+		seller2 = sellerDao.findById(1);
+		seller2.setName("Rafa mustardinha");
+		sellerDao.update(seller2);
 	}
 
 }
